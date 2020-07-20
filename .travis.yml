@@ -1,19 +1,7 @@
-# Windows (https://github.com/travis-ci-tester/toolchain-table)
-
-environment:
-  matrix:
-    ###
-    - TOOLCHAIN: "vs-14-2015"
-      CONFIG: Release
-
-    - TOOLCHAIN: "vs-14-2015"
-      CONFIG: Debug
-
-install:
-
-  # Check versions of tools
-  - cmd: where cmake
-  - cmd: cmake --version
-
-build_script:
-  - cmd: cl -EHsc main.c --toolchain "%TOOLCHAIN%" --config "%CONFIG%" --verbose --test
+os: windows
+env:
+  - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
+script:
+  - export PATH=$MSBUILD_PATH:$PATH
+  - cl -EHsc main.c
+  - ./build.bat
