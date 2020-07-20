@@ -7,9 +7,11 @@ matrix:
     - name: "Windows - c"
       os: windows
       language: c
-      env: VS15=true
+      env: 
+        - VS15=true
+        - NMAKE_PATH="/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64_x86/"
       script:
-        - cmake .. -G "Visual Studio 14 2015 Win64" -DBUILD_EXAMPLES=true -DBUILD_WITH_TM2=true -DCHECK_FOR_UPDATES=true
+        - dir /c/Program Files (x86)/
         - cl -EHsc main.c
         - cmake --build . --config $BUILD_CONFIG -- -m
         - ls $BUILD_CONFIG
