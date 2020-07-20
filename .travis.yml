@@ -1,18 +1,18 @@
 env:
   global:
-    - LRS_BUILD_CONFIG=Debug
-    - LRS_RUN_CONFIG=Release
+    - BUILD_CONFIG=Debug
+    - RUN_CONFIG=Release
 matrix:
   include:
-    - name: "Windows - cpp"
+    - name: "Windows - c"
       os: windows
       language: c
       env: VS15=true
       script:
         - cmake .. -G "Visual Studio 14 2015 Win64" -DBUILD_EXAMPLES=true -DBUILD_WITH_TM2=true -DCHECK_FOR_UPDATES=true
         - cl -EHsc main.c
-        - cmake --build . --config $LRS_BUILD_CONFIG -- -m
-        - ls $LRS_BUILD_CONFIG
+        - cmake --build . --config $BUILD_CONFIG -- -m
+        - ls $BUILD_CONFIG
        
 install:
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
