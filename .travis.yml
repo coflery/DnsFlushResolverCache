@@ -1,8 +1,3 @@
-script:
-  - export PATH=$MSBUILD_PATH:$PATH
-  - cl -EHsc main.c
-  - ./build.bat
-
 env:
   global:
     - LRS_BUILD_CONFIG=Debug
