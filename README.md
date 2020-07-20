@@ -3,7 +3,7 @@
 
 The tool is a build file for windows platform.
 
-This code is just a copy from [how-to-clear-flush-the-dns-cache-in-win32-apis](https://stackoverflow.com/questions/52007372/how-to-clear-flush-the-dns-cache-in-win32-apis)and just build it.
+This code is just a copy from [how-to-clear-flush-the-dns-cache-in-win32-apis](https://stackoverflow.com/questions/52007372/how-to-clear-flush-the-dns-cache-in-win32-apis) and just build it.
 
 The author is [CristiFati](https://stackoverflow.com/users/4788546/cristifati)
 
