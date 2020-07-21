@@ -1,5 +1,7 @@
 # Dns Flush Resolver Cache
 [![Build Status](https://api.travis-ci.org/coflery/DnsFlushResolverCache.svg?branch=master)](https://travis-ci.org/coflery/DnsFlushResolverCache)
+[![MinGW build status](https://img.shields.io/appveyor/ci/coflery/DnsFlushResolverCache/master.svg?label=MinGW)](https://ci.appveyor.com/project/coflery/DnsFlushResolverCache)
+[![Windows build status](https://img.shields.io/appveyor/ci/coflery/DnsFlushResolverCache/master.svg?label=Windows)](https://ci.appveyor.com/project/coflery/DnsFlushResolverCache)
 
 The tool is a build file for windows platform.
 
